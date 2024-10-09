@@ -95,3 +95,4 @@ babel
 greenlet >= 3.0.3
 
 
+undetected-chromedriver

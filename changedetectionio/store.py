@@ -95,13 +95,7 @@ class ChangeDetectionStore:
         except (FileNotFoundError):
             if include_default_watches:
                 logger.critical(f"No JSON DB found at {self.json_store_path}, creating JSON store at {self.datastore_path}")
-                self.add_watch(url='https://news.ycombinator.com/',
-                               tag='Tech news',
-                               extras={'fetch_backend': 'html_requests'})
-
-                self.add_watch(url='https://changedetection.io/CHANGELOG.txt',
-                               tag='changedetection.io',
-                               extras={'fetch_backend': 'html_requests'})
+               
 
             updates_available = self.get_updates_available()
             self.__data['settings']['application']['schema_version'] = updates_available.pop()

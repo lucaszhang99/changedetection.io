@@ -12,3 +12,7 @@ test-datastore/*
 test-datastore
 *.egg-info*
 .vscode/settings.json
+Include
+Lib
+Scripts
+*.cfg
