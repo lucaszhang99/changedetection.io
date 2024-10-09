@@ -67,13 +67,13 @@ class fetcher(Fetcher):
 
         class RemoteService:
             SELENOID_HOST = 'your-selenoid-host'
-            service_url = 'http://browser-chrome:4444/wd/hub'
+            service_url = 'http://browser-chrome:4444/wd/hub' # todo: dynamic passin value
             path = '/usr/bin/true'  # some existing fake path
 
             def start(self):
                 pass
 
-            def stop(self):
+            def stop(self): # todo fix stopping
                 pass
 
         class UdChrome(uc.Chrome):
